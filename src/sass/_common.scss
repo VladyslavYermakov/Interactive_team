@@ -1,1 +1,61 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+:root{
+    --white: #fff;
+    --correct: #039900;
+    --incorrect: #990000;
+    --black: #000;
+}
+body {
+    background-color: white;
+    color: #000;
+    font-family: "Montserrat Alternates", sans-serif;
+    transition: 0.5s;
+}
+
+body a {
+    color: #000;
+}
+/*THEME BLACK WORK GOOD*/
+body.dark {
+    background-color: #1e1e1e;
+    color: var(--white);
+}
+body.dark a {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+body.dark header a {
+    color: var(--black);
+}
+
+button{
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1920px;
+    padding: 0;
+}
+
+
+h1, h2, h3, p, ul, li, input, button, img, a, body {
+    margin: 0;
+    padding: 0;
+}
