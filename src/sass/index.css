@@ -205,4 +205,17 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
 .threenumbers {
   margin-top: 1000px;
   margin-left: 550px;
+}
+
+.threenumbers-item {
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 12px;
+}
+
+.input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }/*# sourceMappingURL=index.css.map */
