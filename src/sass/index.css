@@ -218,4 +218,7 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
+  margin-left: 38px;
+  border-radius: 20px;
+  border: none;
 }/*# sourceMappingURL=index.css.map */
