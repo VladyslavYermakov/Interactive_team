@@ -167,6 +167,11 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
   background-color: #F1F1F1;
 }
 
-body {
-  padding: 0px;
+.threenumbers-list {
+  display: flex;
+}
+
+.threenumbers {
+  margin-top: 1000px;
+  margin-left: 550px;
 }/*# sourceMappingURL=index.css.map */
