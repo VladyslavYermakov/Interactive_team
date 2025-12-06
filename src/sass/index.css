@@ -52,6 +52,7 @@ ul, li {
 }
 
 .container {
+  outline: solid orange;
   margin: 0 auto;
   width: 1920px;
   padding: 0;
@@ -229,7 +230,6 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
 
 .threenumbers {
   margin-top: 1000px;
-  margin-left: 550px;
 }
 
 .threenumbers-title {
@@ -272,4 +272,12 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
   color: #ffffff;
   background: #000;
   border-radius: 20px;
+}
+
+.area {
+  background: #5ABB58;
+  border-radius: 37px;
+  border: solid black;
+  width: 720px;
+  height: 220px;
 }/*# sourceMappingURL=index.css.map */
