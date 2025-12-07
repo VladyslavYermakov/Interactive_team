@@ -1,19 +1,15 @@
 let op = "";
 
-// кнопки
-document.getElementById("plus").addEventListener("click", function() {
+document.getElementById("plus").addEventListener("click", () => {
     op = "+";
 });
-
-document.getElementById("minus").addEventListener("click", function() {
+document.getElementById("minus").addEventListener("click", () => {
     op = "-";
 });
-
-document.getElementById("mul").addEventListener("click", function() {
+document.getElementById("mul").addEventListener("click", () => {
     op = "*";
 });
-
-document.getElementById("div").addEventListener("click", function() {
+document.getElementById("div").addEventListener("click", () => {
     op = "/";
 });
 
@@ -27,5 +23,5 @@ function calc() {
     if (op === "*") result = a * b;
     if (op === "/") result = a / b;
 
-    document.getElementById("calculator-result").value = result;
+    document.getElementById("calculator-result").textContent = result;
 }
