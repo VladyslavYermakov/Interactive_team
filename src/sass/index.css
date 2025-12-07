@@ -346,4 +346,22 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
 .knp-svg {
   width: 40px;
   height: 40px;
+}
+
+.sciences-title {
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 12px;
+}
+
+.sciences-btn {
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 12px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
 }/*# sourceMappingURL=index.css.map */
