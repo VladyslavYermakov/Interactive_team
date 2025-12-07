@@ -4,7 +4,6 @@ const ball = document.getElementById('ball');
 document.addEventListener('mousemove', event => {
   const areaRect = area.getBoundingClientRect();
   const ballRect = ball.getBoundingClientRect();
-
   const mouseX = event.clientX - areaRect.left;
   const mouseY = event.clientY - areaRect.top;
 
