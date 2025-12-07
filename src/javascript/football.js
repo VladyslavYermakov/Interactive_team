@@ -4,15 +4,13 @@ const ball = document.getElementById('ball');
 document.addEventListener('mousemove', event => {
   const areaRect = area.getBoundingClientRect();
   const ballRect = ball.getBoundingClientRect();
-  const mouseX = event.clientX - areaRect.left;
-  const mouseY = event.clientY - areaRect.top;
 
-  const ballRadiusX = ballRect.width / 2;
-  const ballRadiusY = ballRect.height / 2;
-
-  let newLeft = mouseX - ballRadiusX;
-  let newTop = mouseY - ballRadiusY;
+  const newLeft = event.clientX - ballRect.width / 2;
+  const newTop = event.clientY - ballRect.height / 2;
 
   ball.style.left = newLeft + 'px';
   ball.style.top = newTop + 'px';
+newLeft = Math.max(0, Math.min(newLeft, areaRect.width - ballRect.width));
+
+newTop = Math.max(0, Math.min(newTop, areaRect.height - ballRect.height));
 });
