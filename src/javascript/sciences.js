@@ -1,3 +1,5 @@
+const result = document.getElementById('result');
+
 const scientists = [
   {
     name: 'Albert',
@@ -84,3 +86,13 @@ const scientists = [
     id: 12,
   },
 ];
+const buttons = document.querySelectorAll('.sciences-btn');
+
+buttons[0].onclick = () => {
+  const arr = scientists.filter(s => s.born >= 1800 && s.born < 1900);
+  result.textContent = arr.map(s => s.name + ' ' + s.surname).join(', ');
+};
+buttons[1].onclick = () => {
+  const einstein = scientists.find(s => s.name === 'Albert');
+  result.textContent = 'Einstein народився в:' + einstein.born;
+};
