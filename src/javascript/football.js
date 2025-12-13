@@ -10,7 +10,4 @@ document.addEventListener('mousemove', event => {
 
   ball.style.left = newLeft + 'px';
   ball.style.top = newTop + 'px';
-newLeft = Math.max(0, Math.min(newLeft, areaRect.width - ballRect.width));
-
-newTop = Math.max(0, Math.min(newTop, areaRect.height - ballRect.height));
 });

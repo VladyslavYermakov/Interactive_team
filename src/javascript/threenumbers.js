@@ -1,3 +1,5 @@
+'use strict';
+
 const a = document.getElementById('num1');
 const b = document.getElementById('num2');
 const c = document.getElementById('num3');

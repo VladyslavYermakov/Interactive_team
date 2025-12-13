@@ -1,4 +1,6 @@
-const result = document.getElementById('result');
+'use strict'
+
+const result = document.getElementById('resultScience');
 
 const scientists = [
   {
@@ -87,29 +89,31 @@ const scientists = [
   },
 ];
 const buttons = document.querySelectorAll('.sciences-btn');
-
+//19 ст
 buttons[0].onclick = () => {
   const arr = scientists.filter(s => s.born >= 1800 && s.born < 1900);
-  resultScience.textContent = arr.map(s => s.name + ' ' + s.surname).join(', ');
+  resultScience.textContent = arr.map(s => s.name + ' ' + s.surname);
 };
+//Einstein
 buttons[1].onclick = () => {
   const einstein = scientists.find(s => s.name === 'Albert');
   resultScience.textContent = 'Einstein народився в:' + einstein.born;
 };
+//alphabet
 buttons[2].onclick = () => {
   const arr = [...scientists].sort((a, b) =>
     a.surname.localeCompare(b.surname)
   );
-  resultScience.textContent = arr
-    .map(s => s.name + ' fddhjfsjhdfjshf ' + s.surname)
-    .join(', ');
+  resultScience.textContent = arr.map(
+    s => s.name + ' ' + s.surname
+  );
 };
-
+//life
 buttons[3].onclick = () => {
   const arr = [...scientists].sort(
     (a, b) => a.dead - a.born - (b.dead - b.born)
   );
-  resultScience.textContent = arr
-    .map(s => s.name + ' ' + s.surname + ' (' + (s.dead - s.born) + ')')
-    .join(', ');
+  resultScience.textContent = arr.map(
+    s => s.name + ' ' + s.surname + ' (' + (s.dead - s.born) + ')'
+  );
 };
