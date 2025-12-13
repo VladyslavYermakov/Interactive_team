@@ -90,9 +90,26 @@ const buttons = document.querySelectorAll('.sciences-btn');
 
 buttons[0].onclick = () => {
   const arr = scientists.filter(s => s.born >= 1800 && s.born < 1900);
-  result.textContent = arr.map(s => s.name + ' ' + s.surname).join(', ');
+  resultScience.textContent = arr.map(s => s.name + ' ' + s.surname).join(', ');
 };
 buttons[1].onclick = () => {
   const einstein = scientists.find(s => s.name === 'Albert');
-  result.textContent = 'Einstein народився в:' + einstein.born;
+  resultScience.textContent = 'Einstein народився в:' + einstein.born;
+};
+buttons[2].onclick = () => {
+  const arr = [...scientists].sort((a, b) =>
+    a.surname.localeCompare(b.surname)
+  );
+  resultScience.textContent = arr
+    .map(s => s.name + ' fddhjfsjhdfjshf ' + s.surname)
+    .join(', ');
+};
+
+buttons[3].onclick = () => {
+  const arr = [...scientists].sort(
+    (a, b) => a.dead - a.born - (b.dead - b.born)
+  );
+  resultScience.textContent = arr
+    .map(s => s.name + ' ' + s.surname + ' (' + (s.dead - s.born) + ')')
+    .join(', ');
 };
