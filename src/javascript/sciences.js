@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const result = document.getElementById('resultScience');
 
@@ -104,9 +104,7 @@ buttons[2].onclick = () => {
   const arr = [...scientists].sort((a, b) =>
     a.surname.localeCompare(b.surname)
   );
-  resultScience.textContent = arr.map(
-    s => s.name + ' ' + s.surname
-  );
+  resultScience.textContent = arr.map(s => s.name + ' ' + s.surname);
 };
 //life
 buttons[3].onclick = () => {
@@ -117,3 +115,10 @@ buttons[3].onclick = () => {
     s => s.name + ' ' + s.surname + ' (' + (s.dead - s.born) + ')'
   );
 };
+//born late
+buttons[4].onclick = () => {
+  const last = scientists.reduce((max, s) => (s.born > max.born ? s : max));
+  result.textContent = last.name + ' ' + last.surname + ' — ' + last.born;
+};
+
+//
