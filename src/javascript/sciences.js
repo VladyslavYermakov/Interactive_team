@@ -121,4 +121,47 @@ buttons[4].onclick = () => {
   result.textContent = last.name + ' ' + last.surname + ' — ' + last.born;
 };
 
-//
+//first letter
+buttons[5].onclick = () => {
+  const arr = scientists.filter(
+    s => s.name[0].toLowerCase() === s.surname[0].toLowerCase()
+  );
+  result.textContent = arr.map(s => s.name + ' ' + s.surname).join(', ');
+};
+
+//start with  a
+buttons[6].onclick = () => {
+  const arr = scientists.filter(s => s.surname[0].toLowerCase() !== 'c');
+  result.textContent = arr.map(s => s.name + '' + s.surname).join(', ');
+};
+
+// delete start with a
+buttons[7].onclick = () => {
+  const arr = scientists.filter(s => s.name[s.name.length - 1] !== 'a');
+  result.textContent = arr.map(s => s.name + '' + s.surname).join(', ');
+};
+
+//live more and less
+
+buttons[8].onclick = () => {
+  let longest = scientists[0];
+  let shortest = scientists[0];
+  scientists.forEach(s => {
+    const age = (s.dead = s.born);
+    if (age > longest.dead - longest.born) {
+      longest = s;
+    }
+    if (age < shortest.dead - shortest.born) {
+      shortest = s;
+    }
+  });
+  result.textContent =
+    'Найдовше: ' +
+    longest.name +
+    '' +
+    longest.surname +
+    ', найменше : ' +
+    shortest.name +
+    '' +
+    shortest.surname;
+};
