@@ -174,3 +174,25 @@
     background: black;
     border-radius: 0 30px 30px 0;
 }
+
+//calculator
+.calculator-title {
+    text-align: center;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.calculator-flex {
+    display: flex;
+    
+}
+
+.operations-buttons {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
