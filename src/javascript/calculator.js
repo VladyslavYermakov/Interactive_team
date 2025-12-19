@@ -1,27 +1,36 @@
-let op = "";
+let operation = "";
 
-document.getElementById("plus").addEventListener("click", () => {
-    op = "+";
-});
-document.getElementById("minus").addEventListener("click", () => {
-    op = "-";
-});
-document.getElementById("mul").addEventListener("click", () => {
-    op = "*";
-});
-document.getElementById("div").addEventListener("click", () => {
-    op = "/";
-});
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const сalcResult = document.getElementById("calculator-result");
 
-function calc() {
-    let a = Number(document.getElementById("num1").value);
-    let b = Number(document.getElementById("num2").value);
-    let result = 0;
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const mul = document.getElementById("mul");
+const div = document.getElementById("div");
+const eq = document.getElementById("eq");
 
-    if (op === "+") result = a + b;
-    if (op === "-") result = a - b;
-    if (op === "*") result = a * b;
-    if (op === "/") result = a / b;
+plus.addEventListener("click", () => {
+    operation = "+";
+});
+minus.addEventListener("click", () => {
+    operation = "-";
+});
+mul.addEventListener("click", () => {
+    operation = "*";
+});
+div.addEventListener("click", () => {
+    operation = "/";
+});
+eq.addEventListener("click", () => {
+    const a = Number(num1.value);
+    const b = Number(num2.value);
+    let res = 0;
 
-    document.getElementById("calculator-result").textContent = result;
-}
+    if (operation === "+") res = a + b;
+    if (operation === "-") res = a - b;
+    if (operation === "*") res = a * b;
+    if (operation === "/") res = a / b;
+
+    сalcResult.textContent = res;
+});
