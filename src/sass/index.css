@@ -263,6 +263,28 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
 
 .calculator-flex {
   display: flex;
+  margin-top: 40px;
+  margin-left: 600px;
+  align-items: center;
+  gap: 20px;
+}
+
+.calculator-input {
+  width: 250px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #ddd;
+  font-size: 16px;
+}
+
+#minutesInput {
+  width: 250px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #ddd;
+  font-size: 16px;
 }
 
 .operations-buttons {
@@ -302,6 +324,94 @@ h1, h2, h3, p, ul, li, input, button, img, a, body {
 
 .slider-image {
   border-radius: 20px;
+}
+
+/*DYNO*/
+.game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid rgb(122, 122, 122);
+  margin: auto;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(./img/trex.svg);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  10% {
+    top: 130px;
+  }
+  20% {
+    top: 110px;
+  }
+  30% {
+    top: 90px;
+  }
+  40% {
+    top: 90px;
+  }
+  50% {
+    top: 80px;
+  }
+  60% {
+    top: 80px;
+  }
+  70% {
+    top: 80px;
+  }
+  80% {
+    top: 90px;
+  }
+  90% {
+    top: 110px;
+  }
+  95% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url("./img/cactus.png");
+  background-size: 20px 40px;
+  animation: block 2s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+#restartBtn {
+  display: block;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 auto;
 }
 
 .threenumbers-list {
